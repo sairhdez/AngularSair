@@ -1,0 +1,44 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"  (click)="sidenav.toggle()">
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
+
+    <img class="avatar mat-elevation-z8" src="./assets/img/logo.png" />
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <img class="avatar mat-elevation-z8" src="./assets/img/foto.jpeg" />
+
+        <h4 class="name">Sair</h4>
+        <p class="designation">Estudiante</p>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span routerLink="/home-component">Home</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span routerLink="/profile-component">Profile</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span routerLink="/about-component">About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <router-outlet>
+
+            </router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
